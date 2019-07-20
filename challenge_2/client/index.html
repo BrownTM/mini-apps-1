@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<hmtl>
   <head>
     <meta charset="utf8">
     <title>CSV Report Generator</title>
   </head>
   <body>
-    <textarea form="form">Enter JSON text...</textarea>
-    <form id="form">
-      <input type="submit">
+      <script src='https://code.jquery.com/jquery-3.4.1.js'></script>
+
+    <form action='/upload_json' method='POST' enctype="multipart/form-data" id="form">
+      <input type='file' name='jsonFile' id="file" required>
+      <input type='submit' value="upload">
     </form>
+    <div id="report"></div>
+    <script src="app.js"></script>
+    <script src='helper.js'></script>
   </body>
-</html>
+</hmtl>
